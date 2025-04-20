@@ -2,7 +2,11 @@ const std = @import("std");
 const testing = std.testing;
 
 pub fn main() !void {
-    std.debug.print("Hello, World!\n", .{});
+    const string = [_]u8{ 'a', 'b', 'c' };
+
+    for (string) |character| {
+        std.debug.print("{u}", .{character});
+    }
 }
 
 test "testing a test" {
