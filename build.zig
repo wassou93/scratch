@@ -32,7 +32,7 @@ pub fn build(b: *std.Build) void {
         run_cmd.addArgs(args);
     }
 
-    // create a test module
+    // create a test
     const exe_test = b.addTest(.{
         .root_module = exe_mod,
     });
